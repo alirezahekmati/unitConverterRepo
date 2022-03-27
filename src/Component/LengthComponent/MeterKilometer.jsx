@@ -5,7 +5,7 @@ function MeterKilometer() {
     return (
         <div className='units'>
             enter meter
-            <input type="number"  ref={ref}/>
+            <input type="number"  ref={ref} placeholder='type here'/>
             =>
             <p>{value}</p>
         </div>

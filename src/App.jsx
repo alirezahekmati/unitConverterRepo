@@ -43,8 +43,8 @@ function App() {
             <Link to='/Length'>Length</Link>
           </nav>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/Volume' element={<Volume />}>
+            <Route path='/*' element={<Home />} />
+            <Route path='/Volume/*' element={<Volume />}>
               <Route path='GalonLitter' element={<GalonLitter />} />
               <Route path='LitterGalon' element={<LitterGalon />} />
             </Route>
@@ -54,7 +54,7 @@ function App() {
               <Route path='OnceKilogram' element={<OnceKilogram />} />
               <Route path='KilogramOnce' element={<KilogramOnce />} />
             </Route>
-            <Route path='/Time' element={<Time />}>
+            <Route path='/Time/*' element={<Time />}>
               <Route path='SecondDay' element={<SecondDay />} />
               <Route path='DaySecond' element={<DaySecond />} />
               <Route path='SecondWeek' element={<SecondWeek />} />

@@ -6,7 +6,7 @@ function GalonLitter() {
     return (
         <div className='units'>
             enter galon
-            <input type="number"  ref={ref}/>
+            <input type="number"  ref={ref} placeholder='type here'/>
             =>
             <p>{value}</p>
         </div>

@@ -6,7 +6,7 @@ function KilogramOnce() {
     return (
         <div className='units'>
             enter Kilogram
-            <input type="number"  ref={ref}/>
+            <input type="number"  ref={ref} placeholder='type here'/>
             =>
             <p>{value}</p>
         </div>

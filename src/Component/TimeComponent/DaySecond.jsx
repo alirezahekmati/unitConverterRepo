@@ -6,7 +6,7 @@ function DaySecond() {
     return (
         <div className='units'>
             enter day
-            <input type="number"  ref={ref}/>
+            <input type="number"  ref={ref} placeholder='type here'/>
             =>
             <p>{value}</p>
         </div>

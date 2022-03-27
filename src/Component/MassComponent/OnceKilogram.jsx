@@ -6,7 +6,7 @@ function OnceKilogram() {
     return (
         <div className='units'>
             enter Once
-            <input type="number"  ref={ref}/>
+            <input type="number"  ref={ref} placeholder='type here'/>
             =>
             <p>{value}</p>
         </div>
