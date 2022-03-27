@@ -207,8 +207,8 @@ body {
     
 }
 .App{
-    width: 80vw;
-    height: 90vh;
+    /* width: 80vw; */
+    /* width: 90%; */
     margin:auto;
      /* max-width: 37.5em;     */
     display: flex;
@@ -222,6 +222,7 @@ body {
     background-color: var(--clr-light); 
     color: var(--clr-black);
     padding:  1em;
+    border-radius: 15px;
 }
 .App nav {
   display: flex;
@@ -258,13 +259,40 @@ h3 {
   align-items: center;
   padding: 1em;
   gap: .5em;
+  
 }
 .units >p {
   border: 1px solid black;
   border-radius: 5px;
   margin: 1em;
 }
+.refrence{
+  font-size: .8rem;
+}
+.ref-image{
+  width: 100px;
+  margin: 1em;
+  display: inline;
+}
+nav >a {
+  font-size: 1rem;
+  border-bottom: 1px solid hsl(0,0%,89%);
 
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.App-warp{
+  width: 90vw;
+  height: 90vh;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
 
 
 
@@ -336,7 +364,8 @@ h3 {
 
 
 
-@media (min-width:37.5em){
+
+/* @media (min-width:37.5em){
     html, body {
     font-size: 1.3rem;
     }  
@@ -346,4 +375,4 @@ h3 {
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     } 
-} 
+}  */

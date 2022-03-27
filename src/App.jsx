@@ -33,43 +33,46 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <nav>
+      <div className='App-warp'>
+        <div className="App">
+          <nav>
+            <Link to='/'><img src={image} alt="converter" className='conerter-home' /></Link>
+            <Link to='/Volume'>Volume</Link>
+            <Link to='/Mass'>Mass</Link>
+            <Link to='/Time'>Time</Link>
+            <Link to='/Length'>Length</Link>
+          </nav>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Volume' element={<Volume />}>
+              <Route path='GalonLitter' element={<GalonLitter />} />
+              <Route path='LitterGalon' element={<LitterGalon />} />
+            </Route>
+            <Route path='/Mass/*' element={<Mass />}>
+              <Route path='PoundKilogram' element={<PoundKilogram />} />
+              <Route path='KilogramPound' element={<KilogramPound />} />
+              <Route path='OnceKilogram' element={<OnceKilogram />} />
+              <Route path='KilogramOnce' element={<KilogramOnce />} />
+            </Route>
+            <Route path='/Time' element={<Time />}>
+              <Route path='SecondDay' element={<SecondDay />} />
+              <Route path='DaySecond' element={<DaySecond />} />
+              <Route path='SecondWeek' element={<SecondWeek />} />
+              <Route path='WeekSecond' element={<WeekSecond />} />
+            </Route>
+            <Route path='/Length/*' element={<Length />}>
+              <Route path='MeterCentimeter' element={<MeterCentimeter />} />
+              <Route path='CentimeterMeter' element={<CentimeterMeter />} />
+              <Route path='Kilometermeter' element={<KilometerMeter />} />
+              <Route path='meterKilometer' element={<MeterKilometer />} />
+              <Route path='FootMeter' element={<FootMeter />} />
+              <Route path='MeterFoot' element={<MeterFoot />} />
+            </Route>
+          </Routes>
+        </div >
 
-          <Link to='/'><img src={image} alt="converter" className='conerter-home' /></Link>
-          <Link to='/Volume'>Volume</Link>
-          <Link to='/Mass'>Mass</Link>
-          <Link to='/Time'>Time</Link>
-          <Link to='/Length'>Length</Link>
-        </nav>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Volume' element={<Volume />}>
-            <Route path='GalonLitter' element={<GalonLitter />} />
-            <Route path='LitterGalon' element={<LitterGalon />} />
-          </Route>
-          <Route path='/Mass/*' element={<Mass />}>
-            <Route path='PoundKilogram' element={<PoundKilogram />} />
-            <Route path='KilogramPound' element={<KilogramPound />} />
-            <Route path='OnceKilogram' element={<OnceKilogram />} />
-            <Route path='KilogramOnce' element={<KilogramOnce />} />
-          </Route>
-          <Route path='/Time' element={<Time />}>
-            <Route path='SecondDay' element={<SecondDay />} />
-            <Route path='DaySecond' element={<DaySecond />} />
-            <Route path='SecondWeek' element={<SecondWeek />} />
-            <Route path='WeekSecond' element={<WeekSecond />} />
-          </Route>
-          <Route path='/Length/*' element={<Length />}>
-            <Route path='MeterCentimeter' element={<MeterCentimeter />} />
-            <Route path='CentimeterMeter' element={<CentimeterMeter />} />
-            <Route path='Kilometermeter' element={<KilometerMeter />} />
-            <Route path='meterKilometer' element={<MeterKilometer />} />
-            <Route path='FootMeter' element={<FootMeter />} />
-            <Route path='MeterFoot' element={<MeterFoot />} />
-          </Route>
-        </Routes>
-      </div >
+      </div>
+
     </Router >
   )
 }
